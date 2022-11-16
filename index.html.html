@@ -1,0 +1,33 @@
+<html>  
+<head>  
+<title> Registration Page</title>  
+</head>  
+<body align="center" >  
+<h1> REGISTRATION FORM</h1>  
+<table cellspacing="4" align="center" cellpadding="8" border="0">  
+<tr><td> CHILDREN COUNT</td>   
+<td><input type="text" placeholder="17 AND BELOW" id="c1" required></td></tr>  
+<tr><td>ADULT COUNT </td>  
+<td><input type="text" placeholder="ABOVE 17" id="a1" required></td></tr>  
+<tr><td>  
+<input type="button" onClick="calculate()" value="AMOUNT">    
+<input type="button" onClick="submit()" value="SUBMIT"> </td></tr>
+<span id="sub"></span>
+<tr><td>  
+<button onClick="window.print()">Print this page</button> 
+</table>  
+<p>TOTAL AMOUNT IS : <br>
+<span id="result"></span>
+<script type="text/javascript">  
+function calculate(){  
+var c=document.getElementById("c1").value;  
+var a=document.getElementById("a1").value;    
+document.getElementById("result").innerHTML =((c*50)+(a*100));
+}  
+function submit(){
+ document.getElementById("sub").innerHTML ="REGISTRATION DONE!";
+        }
+
+</script>  
+</body>  
+</html>
